@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tulip</title>
+</head>
+
+<body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="about.html">Flowers</a></li>
+                <li><a href="daisy.html">Daisy</a></li>
+                <li><a href="lavender.html">Lavender</a></li>
+                <li><a href="orchid.html">Orchid</a></li>
+                <li><a href="rose.html">Rose</a></li>
+                <li><a href="sunflower.html">Sunflower</a></li>
+                <li><a href="tulip.html" class="active">Tulip</a></li>
+            </ul>
+        </nav>
+        <h1>You are a tulip!</h1>
+    </header>
+
+    <main class="container" id="main">
+        <div class="traits">
+            <h2>Loyal | Reliable | Warm | Balanced</h2>
+        </div>
+
+        <div class="description">
+            <img src="images/tulip.jpg" alt="A group of tulips growing in the grass.">
+            <p>You value stability, close relationships, and meaningful connections. While you might not always be the
+                loudest person in the room, people trust and rely on you. Like a tulip, your charm comes from your
+                steady and welcoming nature.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>The Flower Personality Test | <a href="https://umich.instructure.com/courses/137916">UMSI
+                Career Development Office </a></p>
+        <p>© Copyright <span id='year'></span> Regents of the University of Michigan</p>
+        <script>
+            document.querySelector('#year').innerHTML = new Date().getFullYear();
+        </script>
+    </footer>
+
+</body>
+
+</html>

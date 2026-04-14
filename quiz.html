@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="about.html">Flowers</a></li>
+                <li><a href="daisy.html">Daisy</a></li>
+                <li><a href="lavender.html">Lavender</a></li>
+                <li><a href="orchid.html">Orchid</a></li>
+                <li><a href="rose.html">Rose</a></li>
+                <li><a href="sunflower.html">Sunflower</a></li>
+                <li><a href="tulip.html">Tulip</a></li>
+            </ul>
+        </nav>
+        <h1>Flower Personality Quiz</h1>
+    </header>
+    <main class="container" id="main">
+        <form id="quiz">
+
+            <h3>How do you prefer to spend your time?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="rose">
+                I like having a plan and keeping things organized
+            </label><br>
+
+            <label>
+                <input type="radio" name="q1" value="daisy">
+                I like to go with the flow and be spontaneous
+            </label>
+
+            <hr>
+
+            <h3>How do you usually react to change?</h3>
+
+            <label>
+                <input type="radio" name="q2" value="orchid">
+                I enjoy it and adapt pretty quickly
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="lavender">
+                I prefer stability and things staying familiar
+            </label>
+
+            <hr>
+
+            <h3>When do you feel most energized?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="sunflower">
+                Early in the morning
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="orchid">
+                Late at night
+            </label>
+
+            <hr>
+
+            <h3>What kind of place feels most like home?</h3>
+
+            <label>
+                <input type="radio" name="q4" value="sunflower">
+                A big city or lively urban environment
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="tulip">
+                A small town or somewhere quiet and rural
+            </label>
+
+            <hr>
+
+            <h3>Which best describes your social style?</h3>
+
+            <label>
+                <input type="radio" name="q5" value="lavender">
+                I recharge by spending time alone
+            </label><br>
+
+            <label>
+                <input type="radio" name="q5" value="daisy">
+                I recharge by being around people
+            </label>
+
+            <hr>
+
+            <h3>How do you think about your future?</h3>
+
+            <label>
+                <input type="radio" name="q6" value="rose">
+                I like setting big goals and making plans
+            </label><br>
+
+            <label>
+                <input type="radio" name="q6" value="orchid">
+                I prefer to see where life takes me
+            </label>
+
+            <hr>
+
+            <h3>How do you usually handle conflict?</h3>
+
+            <label>
+                <input type="radio" name="q7" value="rose">
+                I address it directly and try to resolve it quickly
+            </label><br>
+
+            <label>
+                <input type="radio" name="q7" value="lavender">
+                I prefer to step back and think things through first
+            </label>
+
+            <hr>
+
+            <h3>How do you approach risk?</h3>
+
+            <label>
+                <input type="radio" name="q8" value="sunflower">
+                I am willing to try almost anything once
+            </label><br>
+
+            <label>
+                <input type="radio" name="q8" value="tulip">
+                I tend to play it safe and be cautious
+            </label>
+
+            <hr>
+
+            <h3>What kind of environment makes you happiest?</h3>
+
+            <label>
+                <input type="radio" name="q9" value="sunflower">
+                Busy, energetic, and full of activity
+            </label><br>
+
+            <label>
+                <input type="radio" name="q9" value="lavender">
+                Calm, peaceful, and relaxed
+            </label>
+
+            <hr>
+
+            <h3>How do you usually make decisions?</h3>
+
+            <label>
+                <input type="radio" name="q10" value="tulip">
+                I like to think things through carefully
+            </label><br>
+
+            <label>
+                <input type="radio" name="q10" value="orchid">
+                I trust my instincts and go with my gut
+            </label>
+
+            <hr>
+
+            <h3>Which description fits you best?</h3>
+
+            <label>
+                <input type="radio" name="q11" value="tulip">
+                Steady and dependable
+            </label><br>
+
+            <label>
+                <input type="radio" name="q11" value="sunflower">
+                Curious and adventurous
+            </label>
+
+            <hr>
+
+            <h3>Pick the scene you would enjoy most:</h3>
+
+            <label>
+                <input type="radio" name="q12" value="daisy">
+                Walking through a lively city street
+            </label><br>
+
+            <label>
+                <input type="radio" name="q12" value="lavender">
+                Relaxing in a quiet garden
+            </label>
+
+            <hr>
+
+            <button type="button" onclick="showResult()">See My Result</button>
+
+        </form>
+
+        <h2 id="result"></h2>
+
+    </main>
+</body>
+
+</html>

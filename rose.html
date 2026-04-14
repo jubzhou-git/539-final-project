@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rose</title>
+</head>
+
+<body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="about.html">Flowers</a></li>
+                <li><a href="daisy.html">Daisy</a></li>
+                <li><a href="lavender.html">Lavender</a></li>
+                <li><a href="orchid.html">Orchid</a></li>
+                <li><a href="rose.html" class="active">Rose</a></li>
+                <li><a href="sunflower.html">Sunflower</a></li>
+                <li><a href="tulip.html">Tulip</a></li>
+            </ul>
+        </nav>
+        <h1>You are a rose!</h1>
+    </header>
+
+    <main class="container" id="main">
+        <div class="traits">
+            <h2>Ambitious | Strong-willed | Confident | Loyal</h2>
+        </div>
+
+        <div class="description">
+            <img src="images/rose.jpg" alt="A large rose bush growing upwards towards the sky.">
+            <p>You have strong goals and a clear sense of direction. People admire your determination and your ability
+                to stand up for what you believe in. Like a rose, you combine beauty and strength — and you are not
+                afraid to show a few thorns when necessary.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>The Flower Personality Test | <a href="https://umich.instructure.com/courses/137916">UMSI
+                Career Development Office </a></p>
+        <p>© Copyright <span id='year'></span> Regents of the University of Michigan</p>
+        <script>
+            document.querySelector('#year').innerHTML = new Date().getFullYear();
+        </script>
+    </footer>
+
+</body>
+
+</html>
