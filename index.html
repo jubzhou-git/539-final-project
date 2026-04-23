@@ -13,42 +13,48 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="daisy.html">Daisy</a></li>
-                <li><a href="lavender.html">Lavender</a></li>
-                <li><a href="orchid.html">Orchid</a></li>
-                <li><a href="rose.html">Rose</a></li>
-                <li><a href="sunflower.html">Sunflower</a></li>
-                <li><a href="tulip.html">Tulip</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Flowers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="daisy.html">Daisy</a></li>
+                        <li><a href="lavender.html">Lavender</a></li>
+                        <li><a href="orchid.html">Orchid</a></li>
+                        <li><a href="rose.html">Rose</a></li>
+                        <li><a href="sunflower.html">Sunflower</a></li>
+                        <li><a href="tulip.html">Tulip</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-        <h1>🌸 The Flower Personality Test 🌸</h1>
+        <h1 id="home_h1">🌸 The Flower Personality Quiz 🌸</h1>
     </header>
     <main class="container" id="main">
         <div class="intro">
-            <h2>Your Central Hub for Career Success at UMSI</h2>
-            <p>Ready to take the next step toward your future career? The UMSI Career Development Resource Hub is your
-                one -stop shop for trusted guidance, practical tools, and the latest information to help you thrive as a
-                student and job-seeker. Whether you are just starting your exploration or getting ready to launch your
-                career, you will find everything you need, organized for you.</p>
+            <h2>Discover What Flower You Are</h2>
+            <p>For my final project, I created a flower personality quiz. The questions connect personality traits with
+                plant traits: for example, people who are adaptable in new environments would resemble a flower that is
+                able to grow in many different climates. There are a total of 6 results: daisy, lavender, orchid, rose,
+                sunflower, and tulip.</p>
         </div>
 
-        <div class="use-resource">
-            <h2>Why Use This Resource?</h2>
-            <ul>
-                <li>Everything in One Place: Stop searching endlessly—quickly access the resources you need for resumes,
-                    interviews, networking, mentorship, and more.</li>
-                <li>Student-Focused Navigation: Browse by topic or question. Key areas are highlighted so you can get
-                    moving right away.</li>
-                <li>Guidance Backed by Experts: All resources are recommended and reviewed by the UMSI Career
-                    Development Office, so you can trust the advice and materials you find here.</li>
-                <li>Always Accessible: Visit the site anytime, from any device. We’re committed to meeting the
-                    accessibility needs of all students.</li>
-                <li>Modern Support, UMSI Excellence: We benchmark against top peer institutions and integrate UMSI’s
-                    unique support, showcasing our commitment to your success.</li>
-            </ul>
+        <div class="first-group">
+            <img src="images/daisy.jpg" alt="A cluster of daisies growing in the grass.">
+            <h3><a href="daisy.html">Daisy</a></h3>
+            <img src="images/lavender.jpg" alt="A field of lavender flowers growing in the grass.">
+            <h3><a href="lavender.html">Lavender</a></h3>
+            <img src="images/orchid.jpg" alt="A group of orchids growing in the grass.">
+            <h3><a href="orchid.html">Orchid</a></h3>
+        </div>
+
+        <div class="second-group">
+            <img src="images/rose.jpg" alt="A large rose bush growing upwards towards the sky.">
+            <h3><a href="rose.html">Rose</a></h3>
+            <img src="images/sunflower.jpg" alt="A field of sunflowers against a clear sky.">
+            <h3><a href="sunflower.html">Sunflower</a></h3>
+            <img src="images/tulip.jpg" alt="A group of tulips growing in the grass.">
+            <h3><a href="tulip.html">Tulip</a></h3>
         </div>
 
     </main>
@@ -58,5 +64,5 @@
     </footer>
 
 </body>
-
+<script src='js/script.js'></script>
 </html>

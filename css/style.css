@@ -19,8 +19,8 @@ a:hover {
 }
 
 :focus {
-  border: 3px dashed darkblue;
-  padding: 5px;
+    border: 3px dashed darkblue;
+    padding: 5px;
 }
 
 header {
@@ -29,7 +29,6 @@ header {
 
 nav li {
     display: inline;
-    padding: 30px;
     font-size: 14px;
 }
 
@@ -37,12 +36,44 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 15px;
+    padding: 30px;
 }
 
 nav {
     background-color: #866241;
     padding: 15px;
     text-align: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #866241;
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+    min-width: 180px;
+    z-index: 9999;
+    border: 1px solid black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 24px;
+    text-align: center;
+    color: white;
+    pointer-events: auto;
 }
 
 img {
@@ -55,6 +86,10 @@ img {
 
 h1 {
     font-size: 25px;
+}
+
+#home_h1 {
+    font-size: 24px;
 }
 
 h2 {
@@ -97,21 +132,159 @@ label {
     font-size: 18px;
 }
 
-/* @media (min-width: 800px) {
-
-.intro {
-    grid-column: 1 / -1;
+.container {
+    display: grid;
 }
 
-.first-group {
-    grid-column: 2 / 3;
+@media (min-width: 700px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    #home_h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    .traits h2 {
+        font-size: 30px;
+    }
+
+    .description p {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    nav a {
+        font-size: 25px;
+        padding: 50px;
+    }
+
+    h3 a {
+        font-size: 30px;
+    }
 }
 
-.first-group img {
-    max-width: 50%;
+@media (min-width: 1000px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 80px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro {
+        grid-column: 1 / -1;
+        padding: 0 30px;
+    }
+
+    .first-group {
+        grid-column: 2 / 3;
+        text-align: center;
+    }
+
+    .second-group {
+        grid-column: 1 / 2;
+        text-align: center;
+        grid-row: 2 / 3;
+    }
+
+    .first-group img {
+        max-width: 80%;
+    }
+
+    .second-group img {
+        max-width: 80%;
+    }
+
+    .description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1 / -1;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .description p {
+        grid-column: 1 / 2;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .personality {
+        grid-row: 1 / 2;
+    }
+
+    .description img {
+        grid-column: 2 / 3;
+    }
+
+    .traits {
+        grid-column: 1 / -1;
+    }
+
+    .traits h2 {
+        font-size: 25px;
+    }
 }
 
-.second-group {
-    grid-column: 1 / 2;
+@media (min-width: 1650px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    #home_h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 43px;
+    }
+
+    p {
+        font-size: 38px;
+    }
+
+    .traits h2 {
+        font-size: 40px;
+    }
+
+    .description p {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    nav a {
+        font-size: 30px;
+        padding: 100px;
+    }
+
+    h3 a {
+        font-size: 38px;
+    }
 }
-} */
