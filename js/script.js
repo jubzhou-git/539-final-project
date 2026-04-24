@@ -2,31 +2,36 @@ const dropdown = document.querySelector('.dropdown');
 const menu = dropdown.querySelector('.dropdown-menu');
 const toggle = dropdown.querySelector('.dropdown-toggle');
 
-dropdown.addEventListener('mouseenter', function () {
-    menu.classList.add('open');
-});
-
-dropdown.addEventListener('mouseleave', function () {
-    menu.classList.remove('open');
-});
-
-menu.addEventListener('mouseenter', function () {
-    menu.classList.add('open');
-});
-
-menu.addEventListener('mouseleave', function () {
-    menu.classList.remove('open');
-});
-
 toggle.addEventListener('click', function (e) {
     e.preventDefault();
+    e.stopPropagation();
     menu.classList.toggle('open');
 });
 
 toggle.addEventListener('keydown', function (e) {
     if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
+        e.stopPropagation();
         menu.classList.toggle('open');
+    }
+});
+
+dropdown.addEventListener('focusout', function (e) {
+    if (!dropdown.contains(e.relatedTarget)) {
+        menu.classList.remove('open');
+    }
+});
+
+document.addEventListener('click', function (e) {
+    if (!dropdown.contains(e.target)) {
+        menu.classList.remove('open');
+    }
+});
+
+dropdown.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        toggle.focus();
     }
 });
 
