@@ -28,183 +28,392 @@
                 </li>
             </ul>
         </nav>
-        <h1>🪻Choose the response that best fits you🪻</h1>
+        <h1>What Flower Are You?</h1>
     </header>
     <main class="container" id="main">
         <h2>Choose the response that best fits you</h2>
-        <form id="quiz">
 
-            <h3>How do you prefer to spend your time?</h3>
+        <form class="quiz-form" id="quiz-form" onsubmit="handleSubmit(event)">
 
-            <label>
-                <input type="radio" name="q1" value="rose">
-                I like having a plan and keeping things organized
-            </label><br>
+            <!-- Question 1 -->
+            <div class="question-card" id="card-0">
+                <div class="question-header">
+                    <span class="question-num">Q1.</span>
+                    <span class="question-text">How do you usually spend a free Saturday morning?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q0" value="sunflower:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Outdoors on a walk, run, or time in the garden</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q0" value="lavender:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Chilling and reading a book or watching a show</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q0" value="tulip:2,orchid:2">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Getting a head start on something creative or productive</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q0" value="rose:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Catching up with someone I love over brunch</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q0" value="daisy:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Doing whatever feels right in the moment</span>
+                    </label>
+                </div>
+            </div>
 
-            <label>
-                <input type="radio" name="q1" value="daisy">
-                I like to go with the flow and be spontaneous
-            </label>
+            <!-- Question 2 -->
+            <div class="question-card" id="card-1">
+                <div class="question-header">
+                    <span class="question-num">Q2.</span>
+                    <span class="question-text">Which best describes how you handle conflict?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q1" value="lavender:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I stay calm and try to understand all sides</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q1" value="rose:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I address the conflict quickly and head on</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q1" value="orchid:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I tend to step back and process the situation alone before responding</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q1" value="daisy:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I try to keep the peace and lighten the mood</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q1" value="tulip:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I look for the most rational solution and work toward it</span>
+                    </label>
+                </div>
+            </div>
 
-            <hr>
+            <!-- Question 3 -->
+            <div class="question-card" id="card-2">
+                <div class="question-header">
+                    <span class="question-num">Q3.</span>
+                    <span class="question-text">What does your ideal social life look like?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q2" value="sunflower:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A big, lively group because the more the merrier</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q2" value="rose:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A small circle of deeply trusted, close friends</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q2" value="orchid:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Mostly spending time alone with the occasional meaningful connection</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q2" value="daisy:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Casual hangouts with friendly, low-drama people</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q2" value="tulip:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I like variety and meeting new people</span>
+                    </label>
+                </div>
+            </div>
 
-            <h3>How do you usually react to change?</h3>
+            <!-- Question 4 -->
+            <div class="question-card" id="card-3">
+                <div class="question-header">
+                    <span class="question-num">Q4.</span>
+                    <span class="question-text">A friend is going through a hard time. What do you do?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q3" value="sunflower:3,rose:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Show up with food, a hug, and anything else they might need</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q3" value="lavender:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Listen quietly without judgment and make time for them</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q3" value="tulip:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Help them make a practical plan to move forward</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q3" value="daisy:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Say something funny to make the mood lighter</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q3" value="rose:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Write them a heartfelt message with words of affirmation</span>
+                    </label>
+                </div>
+            </div>
 
-            <label>
-                <input type="radio" name="q2" value="orchid">
-                I enjoy it and adapt pretty quickly
-            </label><br>
+            <!-- Question 5 -->
+            <div class="question-card" id="card-4">
+                <div class="question-header">
+                    <span class="question-num">Q5.</span>
+                    <span class="question-text">Which word resonates with you most?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q4" value="sunflower:3,rose:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Radiance</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q4" value="daisy:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Freedom</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q4" value="orchid:3,rose:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Depth</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q4" value="lavender:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Serenity</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q4" value="rose:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Devotion</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q4" value="tulip:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Renewal</span>
+                    </label>
+                </div>
+            </div>
 
-            <label>
-                <input type="radio" name="q2" value="lavender">
-                I prefer stability and things staying familiar
-            </label>
+            <!-- Question 6 -->
+            <div class="question-card" id="card-5">
+                <div class="question-header">
+                    <span class="question-num">Q6.</span>
+                    <span class="question-text">How do you tend to make big decisions?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q5" value="rose:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I go with my gut and my instinct is rarely wrong</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q5" value="lavender:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I'm cautious and weigh things carefully before committing</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q5" value="sunflower:3,rose:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I talk it through with the people I trust most</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q5" value="tulip:2,orchid:2">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I research thoroughly and approach it logically</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q5" value="daisy:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I go with whatever feels right and adapt as I go</span>
+                    </label>
+                </div>
+            </div>
 
-            <hr>
+            <!-- Question 7 -->
+            <div class="question-card" id="card-6">
+                <div class="question-header">
+                    <span class="question-num">Q7.</span>
+                    <span class="question-text">Which environment makes you feel most at home?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q6" value="sunflower:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A bright colorful space or sunlit areas</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q6" value="rose:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A cozy cottage or warmly decorated room</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q6" value="lavender:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A peaceful garden or quiet nature trail</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q6" value="orchid:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A sleek, minimal space where I can work effectively</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q6" value="daisy:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Anywhere with good vibes and good people</span>
+                    </label>
+                </div>
+            </div>
 
-            <h3>When do you feel most energized?</h3>
+            <!-- Question 8 -->
+            <div class="question-card" id="card-7">
+                <div class="question-header">
+                    <span class="question-num">Q8.</span>
+                    <span class="question-text">What do people tend to come to you for?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q7" value="sunflower:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Encouragement — I always know how to lift someone up</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q7" value="lavender:3,rose:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A safe space — I listen without judging</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q7" value="orchid:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Honest advice — I tell it like it is</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q7" value="daisy:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A laugh — I always know how to lighten the mood</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q7" value="rose:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Passion and energy — I make everything feel important</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q7" value="tulip:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Fresh ideas — I love thinking of new approaches</span>
+                    </label>
+                </div>
+            </div>
 
-            <label>
-                <input type="radio" name="q3" value="sunflower">
-                Early in the morning — I am an early bird
-            </label><br>
+            <!-- Question 9 -->
+            <div class="question-card" id="card-8">
+                <div class="question-header">
+                    <span class="question-num">Q9.</span>
+                    <span class="question-text">Which of these sounds most like a perfect evening?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q8" value="sunflower:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A bonfire or outdoor gathering with great company</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q8" value="rose:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">An intimate and romantic candlelit dinner</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q8" value="orchid:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">An engaging night partaking in my hobbies</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q8" value="daisy:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Something spontaneous and just going with the flow</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q8" value="lavender:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">A restful evening with tea, peace, and reflection</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q8" value="tulip:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">Trying a new experience and attending a class or event</span>
+                    </label>
+                </div>
+            </div>
 
-            <label>
-                <input type="radio" name="q3" value="orchid">
-                Late at night — I am a night owl
-            </label>
+            <!-- Question 10 -->
+            <div class="question-card" id="card-9">
+                <div class="question-header">
+                    <span class="question-num">Q10.</span>
+                    <span class="question-text">How would you describe yourself in one honest sentence?</span>
+                </div>
+                <div class="answers">
+                    <label class="answer-label">
+                        <input type="radio" name="q9" value="sunflower:3,rose:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I'm the one who always shows up for everyone</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q9" value="daisy:3,sunflower:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I live for joy and never take life too seriously</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q9" value="orchid:3,lavender:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I'm complex and open up to others slowly</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q9" value="lavender:3,tulip:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I crave peace and am chill wherever I go</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q9" value="rose:3,orchid:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I care for things heavily and feel my emotions deeply</span>
+                    </label>
+                    <label class="answer-label">
+                        <input type="radio" name="q9" value="tulip:3,daisy:1">
+                        <span class="radio-dot"></span>
+                        <span class="answer-text">I'm always trying to grow, adapt, and find new adventures</span>
+                    </label>
+                </div>
+            </div>
 
-            <hr>
-
-            <h3>What kind of place feels most like home?</h3>
-
-            <label>
-                <input type="radio" name="q4" value="sunflower">
-                A big city or lively urban environment
-            </label><br>
-
-            <label>
-                <input type="radio" name="q4" value="tulip">
-                A small town or somewhere quiet and rural
-            </label>
-
-            <hr>
-
-            <h3>Which best describes your social style?</h3>
-
-            <label>
-                <input type="radio" name="q5" value="lavender">
-                I recharge by spending time alone
-            </label><br>
-
-            <label>
-                <input type="radio" name="q5" value="daisy">
-                I recharge by being around people
-            </label>
-
-            <hr>
-
-            <h3>How do you think about your future?</h3>
-
-            <label>
-                <input type="radio" name="q6" value="rose">
-                I like setting big goals and making plans
-            </label><br>
-
-            <label>
-                <input type="radio" name="q6" value="orchid">
-                I prefer to see where life takes me
-            </label>
-
-            <hr>
-
-            <h3>How do you usually handle conflict?</h3>
-
-            <label>
-                <input type="radio" name="q7" value="rose">
-                I address it directly and try to resolve it quickly
-            </label><br>
-
-            <label>
-                <input type="radio" name="q7" value="lavender">
-                I prefer to step back and think things through first
-            </label>
-
-            <hr>
-
-            <h3>How do you approach risk?</h3>
-
-            <label>
-                <input type="radio" name="q8" value="sunflower">
-                I am willing to try almost anything once
-            </label><br>
-
-            <label>
-                <input type="radio" name="q8" value="tulip">
-                I tend to play it safe and be cautious
-            </label>
-
-            <hr>
-
-            <h3>What kind of environment makes you happiest?</h3>
-
-            <label>
-                <input type="radio" name="q9" value="sunflower">
-                Busy, energetic, and full of activity
-            </label><br>
-
-            <label>
-                <input type="radio" name="q9" value="lavender">
-                Calm, peaceful, and relaxed
-            </label>
-
-            <hr>
-
-            <h3>How do you usually make decisions?</h3>
-
-            <label>
-                <input type="radio" name="q10" value="tulip">
-                I like to think things through carefully
-            </label><br>
-
-            <label>
-                <input type="radio" name="q10" value="orchid">
-                I trust my instincts and go with my gut
-            </label>
-
-            <hr>
-
-            <h3>Which description fits you best?</h3>
-
-            <label>
-                <input type="radio" name="q11" value="tulip">
-                Steady and dependable
-            </label><br>
-
-            <label>
-                <input type="radio" name="q11" value="sunflower">
-                Curious and adventurous
-            </label>
-
-            <hr>
-
-            <h3>Pick the scene you would enjoy most:</h3>
-
-            <label>
-                <input type="radio" name="q12" value="daisy">
-                Walking through a lively city street
-            </label><br>
-
-            <label>
-                <input type="radio" name="q12" value="lavender">
-                Relaxing in a quiet garden
-            </label>
-
-            <hr>
-
-            <button type="button" onclick="showResult()">See My Result</button>
+            <div class="submit-area">
+                <p class="unanswered-msg" id="unanswered-msg">
+                    ⚠️ Please answer all questions before submitting.
+                </p>
+                <button type="submit" class="btn-submit">Find My Flower!</button>
+            </div>
 
         </form>
+
 
 
     </main>
@@ -214,4 +423,5 @@
     </footer>
 </body>
 <script src='js/script.js'></script>
+
 </html>
