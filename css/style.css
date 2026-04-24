@@ -64,7 +64,7 @@ nav {
     border: 1px solid black;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu .dropdown-toggle:focus {
     display: block;
 }
 
@@ -74,6 +74,22 @@ nav {
     text-align: center;
     color: white;
     pointer-events: auto;
+}
+
+.dropdown-menu li a:focus {
+    display: block;
+    padding: 10px 24px;
+    text-align: center;
+    color: white;
+    pointer-events: auto;
+}
+
+.dropdown:focus-within {
+    display: block;
+}
+
+.dropdown-menu.open {
+    display: block;
 }
 
 img {
@@ -185,12 +201,39 @@ label {
     margin-bottom: 20px;
 }
 
+.btn-quiz {
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Nunito Sans', 'Merriweather';
+    margin-bottom: 20px;
+    background-color: #866241;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-quiz a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-quiz a:hover {
+    text-decoration: underline;
+}
+
 .unanswered-msg {
     display: none;
     color: red;
 }
 
 @media (min-width: 700px) {
+    .btn-quiz {
+        font-size: 23px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
     .quiz-form {
         grid-column: 1 / -1;
         display: grid;
@@ -342,6 +385,11 @@ label {
 }
 
 @media (min-width: 1750px) {
+    .btn-quiz {
+        font-size: 28px;
+        padding: 28px;
+        margin-bottom: 35px;
+    }
 
     .question-num,
     .question-text,

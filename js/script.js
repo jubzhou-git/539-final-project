@@ -23,6 +23,13 @@ toggle.addEventListener('click', function (e) {
     menu.classList.toggle('open');
 });
 
+toggle.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        menu.classList.toggle('open');
+    }
+});
+
 function handleSubmit(event) {
     event.preventDefault();
 
